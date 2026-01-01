@@ -256,7 +256,7 @@ magic /home/fluks/OpenLane/designs/cnt_down4/runs/RUN_2025.12.31_12.01.18/result
 
 ---
 
-## 🎉 Selesai
+## 🎉 DAH ABIS
 
 Environment **Analog VLSI Design berbasis Sky130** siap digunakan.
 
