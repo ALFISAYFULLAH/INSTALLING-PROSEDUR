@@ -141,6 +141,19 @@ sudo apt upgrade -y
 sudo apt install -y build-essential gcc make perl git
 ```
 
+Git membutuhkan identitas untuk setiap commit.
+
+```bash
+git config --global user.name "Nama Kamu"
+git config --global user.email "email@domain.com"
+```
+
+Cek konfigurasi:
+
+```bash
+git config --global --list
+```
+
 ## 4.2 Library Pendukung EDA
 
 ```bash
@@ -292,10 +305,6 @@ export LD_LIBRARY_PATH=/opt/eda/lib
 # EDA Binary Path
 export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
 
-# OpenLane Environment (Optional)
-export OPENLANE_ROOT=$HOME/OpenLane
-export PDK=sky130A
-
 # ============================================
 ```
 
@@ -329,8 +338,8 @@ mkdir -p ~/design/{xschem,magic,netgen}
 
 ```bash
 cd ~/design/xschem
-ln -s /opt/pdk/share/pdk/sky130A/libs.tech/xschem/xschemrc
-ln -s /opt/pdk/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+ln -s /opt/pdk/share/pdk/ciel/sky130/versions/*/sky130A/libs.tech/xschem/xschemrc 
+ln -s /opt/pdk/share/pdk/ciel/sky130/versions/*/sky130A/libs.tech/ngspice/spinit .spiceinit
 ```
 
 > 📷 *Xschem terhubung Sky130*  
@@ -340,14 +349,14 @@ ln -s /opt/pdk/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
 
 ```bash
 cd ~/design/magic
-ln -s /opt/pdk/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+ln -s /opt/pdk/share/pdk/ciel/sky130/versions/*/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 ```
 
 ## 8.4 Netgen
 
 ```bash
 cd ~/design/netgen
-ln -s /opt/pdk/share/pdk/sky130A/libs.tech/netgen/setup.tcl setup.tcl
+ln -s /opt/pdk/share/pdk/ciel/sky130/versions/*/sky130A/libs.tech/netgen/setup.tcl setup.tcl
 ```
 
 > 📷 *Magic + Sky130*  
