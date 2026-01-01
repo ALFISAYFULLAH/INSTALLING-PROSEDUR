@@ -32,7 +32,7 @@ Panduan ini cocok untuk:
 - **Internet**: Wajib
 
 📷 *Contoh environment Ubuntu*  
-![Ubuntu Environment](./images/ubuntu.png)
+![Ubuntu Environment](images/ubuntu.png)
 
 ---
 
@@ -48,7 +48,7 @@ Panduan ini cocok untuk:
 | **KLayout** | Layout viewer (opsional) |
 
 📷 *Analog IC Design Flow*  
-![Analog Flow](./images/flow.png)
+![Analog Flow](images/flow.png)
 
 ---
 
@@ -125,7 +125,7 @@ sudo make install
 ```
 
 📷 *Ngspice CLI*
-![Ngspice](images/07_ngspice.png)
+![Ngspice](images/ngspice-1.png)
 
 ---
 
@@ -143,7 +143,7 @@ sudo make install
 ```
 
 📷 *GAW waveform*
-![GAW](images/08_gaw.png)
+![GAW](images/gaw-1.png)
 
 ---
 
@@ -160,7 +160,7 @@ sudo make install
 ```
 
 📷 *Magic layout editor*
-![Magic](images/09_magic.png)
+![Magic](images/magic-1.png)
 
 ---
 
@@ -175,7 +175,7 @@ sudo make install
 ```
 
 📷 *Netgen LVS*
-![Netgen](images/10_netgen.png)
+![Netgen](images/netgen-1.png)
 
 ---
 
@@ -185,13 +185,9 @@ sudo make install
 cd ~
 git clone https://github.com/The-OpenROAD-Project/OpenLane
 cd OpenLane
-make
+make pdk
 make test
 ```
-
-📷 *OpenLane setup sukses*
-![OpenLane](images/11_openlane.png)
-
 ---
 
 ## 6. Integrasi Tools dengan Sky130
@@ -199,10 +195,6 @@ make test
 ```bash
 mkdir -p ~/design/{xschem,magic,netgen}
 ```
-
-📷 *Struktur folder design*
-![Design Folder](images/12_design_folder.png)
-
 ---
 
 ### Xschem & Ngspice
@@ -214,7 +206,7 @@ ln -s /opt/pdk/share/pdk/ciel/sky130/versions/*/sky130A/libs.tech/ngspice/spinit
 ```
 
 📷 *Xschem terhubung Sky130*
-![Xschem Sky130](images/13_xschem_sky130.png)
+![Xschem Sky130](images/xschem-2.png)
 
 ---
 
@@ -229,7 +221,7 @@ ln -s /opt/pdk/share/pdk/ciel/sky130/versions/*/sky130A/libs.tech/netgen/setup.t
 ```
 
 📷 *Magic + Sky130*
-![Magic Sky130](images/14_magic_sky130.png)
+![Magic Sky130](images/magic-2.png)
 
 ---
 
@@ -242,19 +234,16 @@ cd ~/OpenLane
 make mount
 ./flow.tcl -design cnt_down4
 ```
-
-📷 *OpenLane flow running*
-![Flow Running](images/15_flow_running.png)
-
 ---
 
 ## 8. Hasil & Visualisasi
 
-📷 *Layout hasil OpenLane (hidden)*
-![Hidden Layout](images/16_layout_hidden.png)
+```bash
+magic /home/fluks/OpenLane/designs/cnt_down4/runs/RUN_2025.12.31_12.01.18/results/final/mag/cnt_down4.mag
+```
 
 📷 *Layout setelah tekan `x`*
-![Final Layout](images/17_final_layout.png)
+![Final Layout](images/layout.png)
 
 ---
 
